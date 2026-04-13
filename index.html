@@ -14,38 +14,54 @@
     <div class="content">
 
       <div class="side-bar">
-        <ul class="nav-list">
-          <li class="nav-item active">Home</li>
-            <li class="nav-item">Calendar</li>
-        </ul>
+           <ul class="nav-list">
+              <li class="nav-item active" data-page="home">Home</li>
+              <li class="nav-item" data-page="calendar">Calendar</li>
+            </ul>
       </div>
+     
 
       <div class="main-content">
 
         <div class="logo-container">
-          <img src="logo.svg" alt="DashBuddy" height="200" />
+          <img src="dashbuddy_logo_v2.svg" alt="DashBuddy" height="150" />
         </div>
 
-        <div class="header-container">
-          <h1>Hello. I am DashBuddy.</h1>
-          <p>I have detected you need organising. I am pleased to assist.</p>
+        <div class="page" id="home">
+
+          <div class="header-container">
+            <h1>Hello. I am DashBuddy.</h1>
+            <p>I have detected you need organising. I am pleased to assist.</p>
+          </div>
+
+          <div class="audio-widget">
+            <audio controls loop>
+              <source src="Jomon Grove - The Mini Vandals.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="widget" id="clock-container">
+            <h2>Clock</h2>
+            <p id="clock"></p>
+          </div>
+
+          <div class="widget" id="todo-widget">
+            <h2>To-Do</h2>
+            <input type="text" id="todo-input" placeholder="Add a task..." />
+            <button id="todo-add">Add Task</button>
+            <ul id="todo-list"></ul>
+          </div>
+
+          <div class="widget" id="notes-widget">
+            <h2>Notes</h2>
+            <textarea id="notes" rows="5" placeholder="Note something down..."></textarea>
+          </div>
+
         </div>
 
-        <div class="widget" id="clock-container">
-          <h2>Clock</h2>
-          <p id="clock"></p>
-        </div>
-
-        <div class="widget" id="todo-widget">
-          <h2>To-Do</h2>
-          <input type="text" id="todo-input" placeholder="Add a task..." />
-          <button id="todo-add">Add Task</button>
-          <ul id="todo-list"></ul>
-        </div>
-
-        <div class="widget" id="notes-widget">
-          <h2>Notes</h2>
-          <textarea id="notes" rows="5" placeholder="Note something down..."></textarea>
+        <div class="page" id="calendar" >
+          <h1>Calendar</h1>
+          <p>Coming soon...</p>
         </div>
 
       </div>
