@@ -12,11 +12,12 @@
   <div class="main-container">
 
     <div class="content">
-
+<!-- nav -->
       <div class="side-bar">
            <ul class="nav-list">
               <li class="nav-item active" data-page="home">Home</li>
               <li class="nav-item" data-page="calendar">Calendar</li>
+              <li class="nav-item" data-page="todo">To-Do</li>
             </ul>
       </div>
      
@@ -26,7 +27,7 @@
         <div class="logo-container">
           <img src="dashbuddy_logo_v2.svg" alt="DashBuddy" height="150" />
         </div>
-
+<!-- home dash -->
         <div class="page" id="home">
 
           <div class="header-container">
@@ -58,16 +59,43 @@
           </div>
 
         </div>
-
+<!-- calendar -->
         <div class="page" id="calendar" >
           <h1>Calendar</h1>
           <p>Coming soon...</p>
         </div>
+<!-- todo -->
+        <div class="page" id="todo" style="display:none">
+        <h1>To-Do</h1>
+        <table id="todo-table">
+          <thead>
+            <tr>
+              <th>Done</th>
+              <th>Task</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="todo-body"></tbody>
+        </table>
+      </div>
 
       </div>
     </div>
   </div>
+  <!-- toast -->
+<div id="toast">Task added! View in the To-Do tab.</div>
 
+<!-- Edit -->
+<div id="modal-overlay" style="display:none">
+  <div id="modal">
+    <h2>Edit Task</h2>
+    <input type="text" id="modal-input" placeholder="Edit your task..." />
+    <div id="modal-buttons">
+      <button id="modal-cancel">Cancel</button>
+      <button id="modal-save">Save</button>
+    </div>
+  </div>
+</div>
   <script src="index.js"></script>
 </body>
 </html>
