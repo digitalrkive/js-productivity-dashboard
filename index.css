@@ -246,3 +246,166 @@ button:hover {
   gap: 8px;
   justify-content: flex-end;
 }
+
+#fc-topics-grid,
+#fc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.fc-topic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fc-topic-card:hover {
+  border-color: var(--teal);
+  background: rgba(0, 180, 216, 0.08);
+}
+
+.fc-topic-card h3 {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.fc-topic-card span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.fc-topic-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.fc-topic-actions button {
+  margin-top: 0;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+/* Card tiles in cards view */
+.fc-card-tile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fc-card-tile .fc-card-front {
+  font-size: 0.875rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.fc-card-tile .fc-card-back {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.fc-card-tile-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.fc-card-tile-actions button {
+  margin-top: 0;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+
+.fc-flashcard {
+  width: 100%;
+  max-width: 520px;
+  height: 260px;
+  margin: 32px auto 0;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.fc-flashcard-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.fc-flashcard.flipped .fc-flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.fc-flashcard-front,
+.fc-flashcard-back {
+  position: absolute;
+  inset: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  backface-visibility: hidden;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.fc-flashcard-back {
+  transform: rotateY(180deg);
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.fc-hint {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+#fc-study-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+#fc-study-nav button {
+  margin-top: 0;
+}
+
+#fc-back-btn,
+#fc-study-back-btn {
+  margin-top: 0;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+
+#fc-add-topic-btn,
+#fc-add-card-btn,
+#fc-study-btn {
+  margin-top: 0;
+  margin-right: 8px;
+}
+
+#fc-study-progress {
+  text-align: center;
+  font-size: 0.85rem;
+}
